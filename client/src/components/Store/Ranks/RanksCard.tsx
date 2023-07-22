@@ -28,7 +28,7 @@ const RanksCard = ({ id, price, title, perks }: Rank) => {
         <p className={styles.price}>${price}</p>
         <div className={styles.perks}>
           {perks?.map((perk) => (
-            <div className={styles.perk} key={Math.random()}>
+            <div className={styles.perk} key={id}>
               {perk.active === true ? (
                 <p className={styles.perkTrue}>{perk.value}</p>
               ) : (

@@ -12,6 +12,7 @@ import image5 from "../../assets/shop/5.jpg";
 import { useNavigate } from "react-router-dom";
 import RanksContainer from "../../components/Store/Ranks/RanksContainer";
 import { useState } from "react";
+import LootContainer from "../../components/Store/Loot/LootContainer";
 
 const StorePage = () => {
   const navigate = useNavigate();
@@ -73,6 +74,11 @@ const StorePage = () => {
                     />
                     {shop.name === "Ranks" && active === true ? (
                       <RanksContainer className={styles.comp} />
+                    ) : (
+                      <></>
+                    )}
+                    {shop.name === "Loot Crates" && active === true ? (
+                      <LootContainer className={styles.comp} />
                     ) : (
                       <></>
                     )}
