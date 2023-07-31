@@ -1,18 +1,16 @@
 import styles from "./RanksCard.module.css";
 const RanksPlaceholder = () => {
-  const title = "Default";
   const perksArray = [
     "No chat cooldown",
-    "Bonus Coins",
-    "Friend list size",
-    "Crate keys discount",
-    "Fly",
-    "Respawn",
+    "Private messages",
+    "Random teleport (survival)",
+    "Sethome (survival)",
+    "Warp command",
     "Clear inventory",
-    "Custom name",
-    "Colored name in chat",
-    "Server join alert",
-    "Custom Skins",
+    "Colored name",
+    "Heal (survival)",
+    "Gsit animations",
+    "Priority queue",
   ];
   return (
     <div className={styles.container}>

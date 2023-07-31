@@ -55,8 +55,13 @@ const Section = () => {
             duration: 1,
           }}
         >
-          <a href="/" className={styles.button}>
-            <span className={styles.buttonText}>Play Now</span>
+          <a
+            className={styles.button}
+            onClick={() =>
+              window.navigator.clipboard.writeText("162.33.20.116:25613")
+            }
+          >
+            <span className={styles.buttonText}>IP: 162.33.20.116:25613</span>
           </a>
         </motion.div>
       </div>

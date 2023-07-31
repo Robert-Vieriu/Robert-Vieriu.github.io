@@ -1,19 +1,26 @@
 import styles from "./LootCard.module.css";
 
 interface Chests {
-  id: number;
   title: string;
+  price: number;
+  link: string;
+  image: string;
 }
 
-const LootCard = ({ id, title }: Chests) => {
+const LootCard = ({ title, price, link, image }: Chests) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={() => (window.location.href = `${link}`)}
+    >
       <div className={styles.card}>
+        <img src={image} alt={image} className={styles.lootImage} />
+
         <div className={styles.overlay}>
           <p className={styles.overlayText}>Buy</p>
         </div>
-        <div>{id}</div>
-        <div>{title}</div>
+        <p>{title}</p>
+        <p>{price}</p>
       </div>
     </div>
   );

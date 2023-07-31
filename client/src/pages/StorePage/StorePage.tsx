@@ -26,7 +26,7 @@ const StorePage = () => {
     },
     {
       id: 2,
-      name: "Loot Crates",
+      name: "PCoins",
       description: "",
       image: image2,
       active: false,
@@ -65,7 +65,7 @@ const StorePage = () => {
                 const [active, setActive] = useState(false);
                 return (
                   <>
-                    <StoreCategory
+                    <StoreCategory // Hyper trash approach. Should be changed in the future. Console error key prop
                       key={Math.random() * 1000}
                       name={shop.name}
                       description={shop.description}
@@ -77,7 +77,7 @@ const StorePage = () => {
                     ) : (
                       <></>
                     )}
-                    {shop.name === "Loot Crates" && active === true ? (
+                    {shop.name === "PCoins" && active === true ? (
                       <LootContainer className={styles.comp} />
                     ) : (
                       <></>

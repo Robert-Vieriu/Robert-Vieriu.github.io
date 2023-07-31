@@ -28,8 +28,6 @@ const Navigation = (props: any) => {
     };
   }, []);
 
-  console.log(props.playerOnline);
-
   return (
     <nav className={navStyle}>
       <div
@@ -76,13 +74,19 @@ const Navigation = (props: any) => {
           <li className={styles.listItem}>
             <Link
               className="listLink"
-              to="news"
+              to={"news"}
               spy={true}
               smooth={true}
               offset={document.documentElement.clientHeight * -0.1}
               duration={500}
             >
-              <a className={styles.listLink}>News</a>
+              <a
+                //@ts-ignore
+                onClick={props.isHome ? null : () => navigate("/")}
+                className={styles.listLink}
+              >
+                News
+              </a>
             </Link>
           </li>
           <li className={styles.listItem}>
@@ -94,7 +98,12 @@ const Navigation = (props: any) => {
               offset={document.documentElement.clientHeight * -0.1}
               duration={500}
             >
-              <a className={styles.listLink}>Minigames</a>
+              <a //@ts-ignore
+                onClick={props.isHome ? null : () => navigate("/")}
+                className={styles.listLink}
+              >
+                Minigames
+              </a>
             </Link>
           </li>
           <li className={styles.listItem}>
@@ -108,7 +117,10 @@ const Navigation = (props: any) => {
             </a>
           </li>
           <li className={styles.listItem}>
-            <a className={styles.listLink} href="/">
+            <a //@ts-ignore
+              onClick={props.isHome ? null : () => navigate("/")}
+              className={styles.listLink}
+            >
               Support
             </a>
           </li>

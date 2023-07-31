@@ -48,7 +48,19 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className={styles.copyright}>All rights reserved. 2023 Pixel Peak.</p>
+      <p className={styles.copyright}>
+        All rights reserved. 2023 Pixel Peak. Images by{" "}
+        <a
+          style={{
+            textDecoration: "none",
+            listStyleType: "none",
+            color: "gray",
+          }}
+          href="https://www.freepik.com/"
+        >
+          Freepik
+        </a>
+      </p>
     </footer>
   );
 };

@@ -6,12 +6,12 @@ import RanksCard from "./RanksCard";
 import RanksPlaceholder from "./RanksPlaceholder";
 
 const RanksContainer = ({ className }: { className: any }) => {
-  const navigate = useNavigate();
   const ranksArray = [
     {
       id: 1,
-      title: "Apprentice",
-      price: 0,
+      title: "Knight",
+      price: 2.49,
+      link: import.meta.env.VITE_RANKS_KNIGHT_LINK,
       perks: [
         {
           title: "No chat cooldown",
@@ -19,29 +19,24 @@ const RanksContainer = ({ className }: { className: any }) => {
           active: true,
         },
         {
-          title: "Bonus Coins",
-          value: "500",
-          active: true,
-        },
-        {
-          title: "Friend list size",
-          value: "25",
-          active: true,
-        },
-        {
-          title: "Crate keys discount",
-          value: "5%",
-          active: true,
-        },
-        {
-          title: "Fly",
+          title: "Private messages",
           value: "X",
           active: true,
         },
         {
-          title: "Respawn",
+          title: "Random teleport (survival)",
           value: "X",
           active: true,
+        },
+        {
+          title: "Sethome (survival)",
+          value: "X",
+          active: true,
+        },
+        {
+          title: "Warp command",
+          value: "",
+          active: false,
         },
         {
           title: "Clear inventory",
@@ -49,93 +44,33 @@ const RanksContainer = ({ className }: { className: any }) => {
           active: false,
         },
         {
-          title: "Custom name",
+          title: "Colored name",
           value: "",
           active: false,
         },
         {
-          title: "Colored name in chat",
+          title: "Heal (survival)",
           value: "",
           active: false,
         },
         {
-          title: "Server join alert",
+          title: "Gsit animations",
           value: "",
           active: false,
         },
         {
-          title: "Custom Skins",
-          value: "",
-          active: false,
-        },
-      ],
-    },
-    {
-      id: 1,
-      title: "Wanderer",
-      price: 10,
-      perks: [
-        {
-          title: "No chat cooldown",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Bonus Coins",
-          value: "700",
-          active: true,
-        },
-        {
-          title: "Friend list size",
-          value: "40",
-          active: true,
-        },
-        {
-          title: "Crate keys discount",
-          value: "10%",
-          active: true,
-        },
-        {
-          title: "Fly",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Respawn",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Clear inventory",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Custom name",
-          value: "",
-          active: false,
-        },
-        {
-          title: "Colored name in chat",
-          value: "",
-          active: false,
-        },
-        {
-          title: "Server join alert",
-          value: "",
-          active: false,
-        },
-        {
-          title: "Custom Skins",
+          title: "Priority queue",
           value: "",
           active: false,
         },
       ],
+      pattern: "dirt",
     },
     {
       id: 2,
-      title: "Knight",
-      price: 10,
+      title: "Wizard",
+      price: 3.75,
+      link: import.meta.env.VITE_RANKS_WIZARD_LINK,
       perks: [
         {
           title: "No chat cooldown",
@@ -143,27 +78,22 @@ const RanksContainer = ({ className }: { className: any }) => {
           active: true,
         },
         {
-          title: "Bonus Coins",
-          value: "900",
-          active: true,
-        },
-        {
-          title: "Friend list size",
-          value: "50",
-          active: true,
-        },
-        {
-          title: "Crate keys discount",
-          value: "20%",
-          active: true,
-        },
-        {
-          title: "Fly",
+          title: "Private messages",
           value: "X",
           active: true,
         },
         {
-          title: "Respawn",
+          title: "Random teleport (survival)",
+          value: "X",
+          active: true,
+        },
+        {
+          title: "Sethome (survival)",
+          value: "X",
+          active: true,
+        },
+        {
+          title: "Warp command",
           value: "X",
           active: true,
         },
@@ -173,155 +103,33 @@ const RanksContainer = ({ className }: { className: any }) => {
           active: true,
         },
         {
-          title: "Custom name",
+          title: "Colored name",
           value: "X",
           active: true,
         },
         {
-          title: "Colored name in chat",
+          title: "Heal (survival)",
           value: "",
           active: false,
         },
         {
-          title: "Server join alert",
+          title: "Gsit animations",
           value: "",
           active: false,
         },
         {
-          title: "Custom Skins",
+          title: "Priority queue",
           value: "",
           active: false,
         },
       ],
+      pattern: "stone",
     },
     {
       id: 3,
-      title: "Wizard",
-      price: 10,
-      perks: [
-        {
-          title: "No chat cooldown",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Bonus Coins",
-          value: "1000",
-          active: true,
-        },
-        {
-          title: "Friend list size",
-          value: "60",
-          active: true,
-        },
-        {
-          title: "Crate keys discount",
-          value: "30%",
-          active: true,
-        },
-        {
-          title: "Fly",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Respawn",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Clear inventory",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Custom name",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Colored name in chat",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Server join alert",
-          value: "",
-          active: false,
-        },
-        {
-          title: "Custom Skins",
-          value: "",
-          active: false,
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "Champion",
-      price: 10,
-      perks: [
-        {
-          title: "No chat cooldown",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Bonus Coins",
-          value: "1200",
-          active: true,
-        },
-        {
-          title: "Friend list size",
-          value: "80",
-          active: true,
-        },
-        {
-          title: "Crate keys discount",
-          value: "40%",
-          active: true,
-        },
-        {
-          title: "Fly",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Respawn",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Clear inventory",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Custom name",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Colored name in chat",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Server join alert",
-          value: "X",
-          active: true,
-        },
-        {
-          title: "Custom Skins",
-          value: "",
-          active: false,
-        },
-      ],
-    },
-    {
-      id: 5,
       title: "Master",
-      price: 10,
+      price: 4.99,
+      link: import.meta.env.VITE_RANKS_MASTER_LINK,
       perks: [
         {
           title: "No chat cooldown",
@@ -329,27 +137,22 @@ const RanksContainer = ({ className }: { className: any }) => {
           active: true,
         },
         {
-          title: "Bonus Coins",
-          value: "1500",
-          active: true,
-        },
-        {
-          title: "Friend list size",
-          value: "100",
-          active: true,
-        },
-        {
-          title: "Crate keys discount",
-          value: "50%",
-          active: true,
-        },
-        {
-          title: "Fly",
+          title: "Private messages",
           value: "X",
           active: true,
         },
         {
-          title: "Respawn",
+          title: "Random teleport (survival)",
+          value: "X",
+          active: true,
+        },
+        {
+          title: "Sethome (survival)",
+          value: "X",
+          active: true,
+        },
+        {
+          title: "Warp command",
           value: "X",
           active: true,
         },
@@ -359,26 +162,27 @@ const RanksContainer = ({ className }: { className: any }) => {
           active: true,
         },
         {
-          title: "Custom name",
+          title: "Colored name",
           value: "X",
           active: true,
         },
         {
-          title: "Colored name in chat",
+          title: "Heal (survival)",
           value: "X",
           active: true,
         },
         {
-          title: "Server join alert",
+          title: "Gsit animations",
           value: "X",
           active: true,
         },
         {
-          title: "Custom Skins",
+          title: "Priority queue",
           value: "X",
           active: true,
         },
       ],
+      pattern: "wood",
     },
   ];
 
@@ -390,12 +194,7 @@ const RanksContainer = ({ className }: { className: any }) => {
             <div className={styles.ranksContainer}>
               <RanksPlaceholder />
               {ranksArray.map((rank) => (
-                <RanksCard
-                  id={rank.id}
-                  price={rank.price}
-                  title={rank.title}
-                  perks={rank.perks}
-                />
+                <RanksCard key={`${rank.id}-${rank.title}`} {...rank} />
               ))}
             </div>
           </div>
