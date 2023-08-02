@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
 
 const Navigation = (props: any) => {
   console.log(props.isHome);
@@ -71,7 +72,8 @@ const Navigation = (props: any) => {
             duration: 1,
           }}
         >
-          <li className={styles.listItem}>
+          {/* TO BE ADDED LATER ON WHEN WE HAVE NEWS */}
+          {/* <li className={styles.listItem}>
             <Link
               className="listLink"
               to={"news"}
@@ -88,7 +90,7 @@ const Navigation = (props: any) => {
                 News
               </a>
             </Link>
-          </li>
+          </li> */}
           <li className={styles.listItem}>
             <Link
               className="listLink"
@@ -118,13 +120,74 @@ const Navigation = (props: any) => {
           </li>
           <li className={styles.listItem}>
             <a //@ts-ignore
-              onClick={props.isHome ? null : () => navigate("/")}
+              onClick={
+                props.isHome
+                  ? null
+                  : () =>
+                      window.location.replace(
+                        `${import.meta.env.VITE_DISCORD_LINK}`
+                      )
+              }
               className={styles.listLink}
             >
               Support
             </a>
           </li>
         </motion.div>
+        <div className={styles.rightMobile}>
+          <Menu right>
+            {/* <Link
+              to={"news"}
+              spy={true}
+              smooth={true}
+              offset={document.documentElement.clientHeight * -0.1}
+              duration={500}
+            >
+              <a
+                //@ts-ignore
+                onClick={props.isHome ? null : () => navigate("/")}
+                className={styles.listLink}
+              >
+                News
+              </a>
+            </Link> */}
+            <Link
+              to="minigames"
+              spy={true}
+              smooth={true}
+              offset={document.documentElement.clientHeight * -0.1}
+              duration={500}
+            >
+              <a //@ts-ignore
+                onClick={props.isHome ? null : () => navigate("/")}
+                className={styles.listLink}
+              >
+                Minigames
+              </a>
+            </Link>
+            <a
+              className={styles.listLink}
+              onClick={() => {
+                navigate("/store");
+              }}
+            >
+              Store
+            </a>
+            <a //@ts-ignore
+              onClick={
+                props.isHome
+                  ? null
+                  : () =>
+                      window.location.replace(
+                        `${import.meta.env.VITE_DISCORD_LINK}`
+                      )
+              }
+              className={styles.listLink}
+            >
+              Support
+            </a>
+          </Menu>
+        </div>
       </ul>
     </nav>
   );

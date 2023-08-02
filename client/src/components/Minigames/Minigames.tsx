@@ -1,11 +1,11 @@
 import Minigame from "./Minigame";
 import styles from "./Minigames.module.css";
-import survival from "../../assets/minigames/survival.png";
-import skywars from "../../assets/minigames/skywars.png";
-import bedwars from "../../assets/minigames/bedwars.png";
-import oneblock from "../../assets/minigames/oneblock.png";
-import skyblock from "../../assets/minigames/skyblock.png";
-import tntrun from "../../assets/minigames/TNTrun.png";
+import survival from "../../assets/minigames/survival-min.png";
+import skywars from "../../assets/minigames/skywars-min.png";
+import bedwars from "../../assets/minigames/bedwars-min.png";
+import oneblock from "../../assets/minigames/oneblock-min.png";
+import skyblock from "../../assets/minigames/skyblock-min.png";
+import tntrun from "../../assets/minigames/TNTrun-min.png";
 import { motion } from "framer-motion";
 
 const Minigames = () => {

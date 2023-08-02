@@ -60,6 +60,56 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .right {
+    display: none;
+  }
+  .rightMobile {
+    display: flex;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .players {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .list {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .left {
+    margin-left: 1rem;
+  }
+
+  .rightMobile {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .right {
+    display: flex;
+  }
+  .rightMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .listLink {
+    font-size: 2rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
 .listItem {
   display: flex;
   flex-direction: row;
@@ -85,6 +135,7 @@
   padding: 0px 7px 7px 7px;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 
 .listLink:hover {
@@ -135,7 +186,7 @@
   box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 1920px) {
   .left {
     margin-left: 3rem;
   }

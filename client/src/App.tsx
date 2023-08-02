@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "./components/Footer/Footer";
 import Minigames from "./components/Minigames/Minigames";
+import toast, { Toaster } from "react-hot-toast";
 
 function App() {
   const [playerOnline, setPlayerOnline] = useState(0);
@@ -24,9 +25,31 @@ function App() {
 
   return (
     <>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          className: "",
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+          success: {
+            duration: 3000,
+            style: {
+              background: "#22bb33",
+              fontFamily: "Roboto",
+              fontSize: "1rem",
+            },
+          },
+        }}
+      />
       <Navigation playerOnline={playerOnline} />
-      <Section />
-      <News />
+      <Section
+        clickOnToast={() => toast.success("Copied IP to clipboard!")}
+        ip={IP}
+      />
+      {/* <News /> */}
       <Minigames />
       <Support />
       <Footer />

@@ -21,14 +21,17 @@ const Footer = () => {
           <div className={styles.row}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
-                <a href="/" className={styles.link}>
+                <a
+                  href={import.meta.env.VITE_DISCORD_LINK}
+                  className={styles.link}
+                >
                   <FontAwesomeIcon
                     className={styles.socialIcons}
                     icon={faDiscord}
                   />
                 </a>
               </li>
-              <li className={styles.listItem}>
+              {/* <li className={styles.listItem}>
                 <a href="/" className={styles.link}>
                   <FontAwesomeIcon
                     className={styles.socialIcons}
@@ -43,13 +46,13 @@ const Footer = () => {
                     icon={faInstagram}
                   />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
       </div>
       <p className={styles.copyright}>
-        All rights reserved. 2023 Pixel Peak. Images by{" "}
+        All rights reserved. 2023 Pixel Peak. Images by
         <a
           style={{
             textDecoration: "none",
@@ -58,7 +61,7 @@ const Footer = () => {
           }}
           href="https://www.freepik.com/"
         >
-          Freepik
+          {" Freepik"}
         </a>
       </p>
     </footer>

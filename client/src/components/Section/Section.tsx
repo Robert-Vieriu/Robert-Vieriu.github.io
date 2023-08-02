@@ -2,8 +2,19 @@ import styles from "./Section.module.css";
 
 import video from "../../assets/video.mp4";
 import { motion } from "framer-motion";
+import { toast } from "react-hot-toast/headless";
 
-const Section = () => {
+interface SectionProps {
+  ip: string;
+  clickOnToast: () => void;
+}
+
+const Section = ({ ip, clickOnToast }: SectionProps) => {
+  const handleClick = () => {
+    window.navigator.clipboard.writeText(ip);
+    clickOnToast();
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.imgContianer}>
@@ -55,13 +66,8 @@ const Section = () => {
             duration: 1,
           }}
         >
-          <a
-            className={styles.button}
-            onClick={() =>
-              window.navigator.clipboard.writeText("162.33.20.116:25613")
-            }
-          >
-            <span className={styles.buttonText}>IP: 162.33.20.116:25613</span>
+          <a className={styles.button} onClick={handleClick}>
+            <span className={styles.buttonText}>IP: {ip}</span>
           </a>
         </motion.div>
       </div>
