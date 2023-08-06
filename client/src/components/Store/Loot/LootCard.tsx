@@ -3,7 +3,7 @@ import styles from "./LootCard.module.css";
 interface Chests {
   title: string;
   price: number;
-  link: string;
+  // link: string;
   image: string;
 }
 

@@ -60,48 +60,45 @@ const StorePage = () => {
             <></>
           )} */}
           {/* {localStorage.getItem("username") ? ( */}
-          <>
-            <p className={styles.donationText}>
-              To donate please contact {import.meta.env.VITE_DISCORD_DONATION}{" "}
-              on our{" "}
-              <span className={styles.donationDiscordText}>
-                <a href={import.meta.env.VITE_DISCORD_LINK}>discord server</a>
-              </span>
-              .
-            </p>
-            <p className={styles.legalNotice}>
-              Pixelpeak server is in no way affiliated with Mojang Studios,
-              Minecraft or Microsoft, nor should it be considered a company
-              endorsed by Mojang Studios, Minecraft or Microsoft. Any
-              contributions or purchases made on this store goes to the
-              Pixelpeak team.
-            </p>
+          <p className={styles.donationText}>
+            To donate please contact {process.env.VITE_DISCORD_DONATION} on our{" "}
+            <span className={styles.donationDiscordText}>
+              <a href={process.env.VITE_DISCORD_LINK}>discord server</a>
+            </span>
+            .
+          </p>
+          <p className={styles.legalNotice}>
+            Pixelpeak server is in no way affiliated with Mojang Studios,
+            Minecraft or Microsoft, nor should it be considered a company
+            endorsed by Mojang Studios, Minecraft or Microsoft. Any
+            contributions or purchases made on this store goes to the Pixelpeak
+            team.
+          </p>
 
-            {shopArray.map((shop) => {
-              const [active, setActive] = useState(false);
-              return (
-                <>
-                  <StoreCategory // Hyper trash approach. Should be changed in the future. Console error key prop
-                    key={Math.random() * 1000}
-                    name={shop.name}
-                    description={shop.description}
-                    image={shop.image}
-                    onClick={() => setActive(!active)}
-                  />
-                  {shop.name === "Ranks" && active === true ? (
-                    <RanksContainer className={styles.comp} />
-                  ) : (
-                    <></>
-                  )}
-                  {shop.name === "PCoins" && active === true ? (
-                    <LootContainer className={styles.comp} />
-                  ) : (
-                    <></>
-                  )}
-                </>
-              );
-            })}
-          </>
+          {shopArray.map((shop) => {
+            const [active, setActive] = useState(false);
+            return (
+              <>
+                <StoreCategory // Hyper trash approach. Should be changed in the future. Console error key prop
+                  key={Math.random() * 1000}
+                  name={shop.name}
+                  description={shop.description}
+                  image={shop.image}
+                  onClick={() => setActive(!active)}
+                />
+                {shop.name === "Ranks" && active === true ? (
+                  <RanksContainer className={styles.comp} />
+                ) : (
+                  <></>
+                )}
+                {shop.name === "PCoins" && active === true ? (
+                  <LootContainer className={styles.comp} />
+                ) : (
+                  <></>
+                )}
+              </>
+            );
+          })}
           {/* ) : (
              <StoreCurrentUser />
            )} */}

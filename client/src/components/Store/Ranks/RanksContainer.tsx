@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import StoreCurrentUser from "../StoreCurrentUser";
+// import StoreCurrentUser from "../StoreCurrentUser";
 import styles from "./RanksContainer.module.css";
 // import { useNavigate } from "react-router-dom";
 import RanksCard from "./RanksCard";
@@ -11,7 +11,7 @@ const RanksContainer = ({ className }: { className: any }) => {
       id: 1,
       title: "Knight",
       price: 2.49,
-      link: import.meta.env.VITE_RANKS_KNIGHT_LINK,
+      link: process.env.VITE_RANKS_KNIGHT_LINK,
       perks: [
         {
           title: "No chat cooldown",
@@ -70,7 +70,7 @@ const RanksContainer = ({ className }: { className: any }) => {
       id: 2,
       title: "Wizard",
       price: 3.75,
-      link: import.meta.env.VITE_RANKS_WIZARD_LINK,
+      link: process.env.VITE_RANKS_WIZARD_LINK,
       perks: [
         {
           title: "No chat cooldown",
@@ -129,7 +129,7 @@ const RanksContainer = ({ className }: { className: any }) => {
       id: 3,
       title: "Master",
       price: 4.99,
-      link: import.meta.env.VITE_RANKS_MASTER_LINK,
+      link: process.env.VITE_RANKS_MASTER_LINK,
       perks: [
         {
           title: "No chat cooldown",
@@ -189,18 +189,18 @@ const RanksContainer = ({ className }: { className: any }) => {
   return (
     <motion.div className={className} transition={{ duration: 1 }}>
       <div className={styles.container}>
-        {localStorage.getItem("username") ? (
-          <div className={styles.ranks}>
-            <div className={styles.ranksContainer}>
-              <RanksPlaceholder />
-              {ranksArray.map((rank) => (
-                <RanksCard key={`${rank.id}-${rank.title}`} {...rank} />
-              ))}
-            </div>
+        {/* {localStorage.getItem("username") ? ( */}
+        <div className={styles.ranks}>
+          <div className={styles.ranksContainer}>
+            <RanksPlaceholder />
+            {ranksArray.map((rank) => (
+              <RanksCard key={`${rank.id}-${rank.title}`} {...rank} />
+            ))}
           </div>
-        ) : (
+        </div>
+        {/* ) : (
           <StoreCurrentUser />
-        )}
+        )} */}
       </div>
     </motion.div>
   );

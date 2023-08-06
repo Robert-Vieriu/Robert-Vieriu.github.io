@@ -7,7 +7,7 @@ interface Rank {
   id: number | string;
   title: string;
   price: number;
-  link: string;
+  // link: string;
   perks: Perk[];
   pattern: string;
 }

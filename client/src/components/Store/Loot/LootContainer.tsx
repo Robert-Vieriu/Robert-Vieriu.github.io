@@ -12,28 +12,28 @@ const LootContainer = ({ className }: { className: any }) => {
       id: 1,
       title: "100 Pcoins",
       price: 0.25,
-      link: import.meta.env.VITE_COINS_100_LINK,
+      link: process.env.VITE_COINS_100_LINK,
       image: wood,
     },
     {
       id: 2,
       title: "500 Pcoins",
       price: 0.99,
-      link: import.meta.env.VITE_COINS_500_LINK,
+      link: process.env.VITE_COINS_500_LINK,
       image: cobble,
     },
     {
       id: 3,
       title: "1000 Pcoins",
       price: 1.49,
-      link: import.meta.env.VITE_COINS_1000_LINK,
+      link: process.env.VITE_COINS_1000_LINK,
       image: ice,
     },
     {
       id: 4,
       title: "2500 Pcoins",
       price: 2.99,
-      link: import.meta.env.VITE_COINS_2500_LINK,
+      link: process.env.VITE_COINS_2500_LINK,
       image: magma,
     },
   ];
@@ -45,7 +45,7 @@ const LootContainer = ({ className }: { className: any }) => {
             key={loot.id}
             title={loot.title}
             price={loot.price}
-            link={loot.link}
+            // link={loot.link}
             image={loot.image}
           />
         ))}

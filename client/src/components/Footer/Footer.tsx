@@ -21,10 +21,7 @@ const Footer = () => {
           <div className={styles.row}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
-                <a
-                  href={import.meta.env.VITE_DISCORD_LINK}
-                  className={styles.link}
-                >
+                <a href={process.env.VITE_DISCORD_LINK} className={styles.link}>
                   <FontAwesomeIcon
                     className={styles.socialIcons}
                     icon={faDiscord}
