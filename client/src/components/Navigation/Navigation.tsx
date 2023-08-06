@@ -101,7 +101,7 @@ const Navigation = (props: any) => {
               duration={500}
             >
               <a //@ts-ignore
-                onClick={props.isHome ? null : () => navigate("/")}
+                onClick={() => navigate("/")}
                 className={styles.listLink}
               >
                 Minigames
@@ -120,14 +120,7 @@ const Navigation = (props: any) => {
           </li>
           <li className={styles.listItem}>
             <a //@ts-ignore
-              onClick={
-                props.isHome
-                  ? null
-                  : () =>
-                      window.location.replace(
-                        `${import.meta.env.VITE_DISCORD_LINK}`
-                      )
-              }
+              href={import.meta.env.VITE_DISCORD_LINK}
               className={styles.listLink}
             >
               Support
@@ -174,14 +167,7 @@ const Navigation = (props: any) => {
               Store
             </a>
             <a //@ts-ignore
-              onClick={
-                props.isHome
-                  ? null
-                  : () =>
-                      window.location.replace(
-                        `${import.meta.env.VITE_DISCORD_LINK}`
-                      )
-              }
+              href={import.meta.env.VITE_DISCORD_LINK}
               className={styles.listLink}
             >
               Support

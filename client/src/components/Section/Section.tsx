@@ -3,6 +3,8 @@ import styles from "./Section.module.css";
 import video from "../../assets/video.mp4";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast/headless";
+import { useEffect, useRef } from "react";
+import lobby from "../../assets/minigames/lobby-min.png";
 
 interface SectionProps {
   ip: string;
@@ -15,10 +17,34 @@ const Section = ({ ip, clickOnToast }: SectionProps) => {
     clickOnToast();
   };
 
+  // var device = "";
+  // if (
+  //   navigator.userAgent.indexOf("Android") != -1 ||
+  //   navigator.userAgent.indexOf("like Mac") != -1
+  // ) {
+  //   device = "phone";
+  // } else if (
+  //   navigator.userAgent.indexOf("Win") != -1 ||
+  //   navigator.userAgent.indexOf("Mac") != -1 ||
+  //   navigator.userAgent.indexOf("Linux") != -1
+  // ) {
+  //   device = "computer";
+  // }
+
   return (
     <section className={styles.section}>
-      <div className={styles.imgContianer}>
-        <video src={video} autoPlay loop muted className={styles.video}></video>
+      <div className={styles.imgContainer}>
+        {/* {device === "computer" ? (
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            className={styles.video}
+          ></video>
+        ) : ( */}
+        <img className={styles.lobbyImg} src={lobby} alt="" />
+        {/* )} */}
         <div className={styles.overlay}></div>
       </div>
       <div className={styles.container}>

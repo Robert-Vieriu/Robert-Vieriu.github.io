@@ -120,3 +120,12 @@
   color: #fff;
   transition: 0.3s all ease-in-out;
 }
+
+.lobbyImg {
+  object-fit: cover;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

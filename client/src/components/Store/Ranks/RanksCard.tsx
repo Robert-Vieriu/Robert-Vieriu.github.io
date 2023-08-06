@@ -30,7 +30,7 @@ const RanksCard = ({ id, price, title, perks, link, pattern }: Rank) => {
         }
       >
         <div className={styles.cardContainer}>
-          <div
+          {/* <div
             className={styles.overlay}
             onClick={() => {
               window.location.href = `${link}`;
@@ -48,7 +48,7 @@ const RanksCard = ({ id, price, title, perks, link, pattern }: Rank) => {
               }
               alt=""
             />
-          </div>
+          </div> */}
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.price}>${price}</p>
           <div className={styles.perks}>

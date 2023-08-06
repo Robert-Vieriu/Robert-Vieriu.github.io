@@ -65,3 +65,28 @@
     transform: translateY(0px);
   }
 }
+
+.donationText {
+  color: white;
+  padding: 24px;
+  padding-bottom: 5px;
+  font-family: "Roboto";
+  font-size: 24px;
+}
+
+.donationDiscordText a {
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(155, 155, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.legalNotice {
+  color: white;
+  padding: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Roboto";
+  font-size: 10px;
+}
