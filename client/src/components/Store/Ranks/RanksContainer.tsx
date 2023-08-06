@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import StoreCurrentUser from "../StoreCurrentUser";
 import styles from "./RanksContainer.module.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import RanksCard from "./RanksCard";
 import RanksPlaceholder from "./RanksPlaceholder";
 

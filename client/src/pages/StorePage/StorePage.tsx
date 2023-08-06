@@ -1,21 +1,21 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Navigation from "../../components/Navigation/Navigation";
 import StoreCategory from "../../components/Store/StoreCategory";
-import StoreCurrentUser from "../../components/Store/StoreCurrentUser";
+// import StoreCurrentUser from "../../components/Store/StoreCurrentUser";
 import styles from "./StorePage.module.css";
 
 import image1 from "../../assets/shop/1.jpg";
 import image2 from "../../assets/shop/2.jpg";
-import image3 from "../../assets/shop/3.jpg";
-import image4 from "../../assets/shop/4.jpg";
-import image5 from "../../assets/shop/5.jpg";
-import { useNavigate } from "react-router-dom";
+// import image3 from "../../assets/shop/3.jpg";
+// import image4 from "../../assets/shop/4.jpg";
+// import image5 from "../../assets/shop/5.jpg";
+// import { useNavigate } from "react-router-dom";
 import RanksContainer from "../../components/Store/Ranks/RanksContainer";
 import { useState } from "react";
 import LootContainer from "../../components/Store/Loot/LootContainer";
 
 const StorePage = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const shopArray = [
     {
       id: 1,

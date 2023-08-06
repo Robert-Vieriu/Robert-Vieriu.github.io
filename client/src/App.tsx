@@ -1,6 +1,6 @@
 import Navigation from "./components/Navigation/Navigation";
 import Section from "./components/Section/Section";
-import News from "./components/News/News";
+// import News from "./components/News/News";
 
 import Support from "./components/Support/Support";
 

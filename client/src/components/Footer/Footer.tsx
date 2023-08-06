@@ -3,8 +3,8 @@ import logoPP from "./../../assets/logoPP.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDiscord,
-  faTwitter,
-  faInstagram,
+  // faTwitter,
+  // faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {

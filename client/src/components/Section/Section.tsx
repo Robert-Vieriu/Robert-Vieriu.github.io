@@ -1,9 +1,9 @@
 import styles from "./Section.module.css";
 
-import video from "../../assets/video.mp4";
+// import video from "../../assets/video.mp4";
 import { motion } from "framer-motion";
-import { toast } from "react-hot-toast/headless";
-import { useEffect, useRef } from "react";
+// import { toast } from "react-hot-toast/headless";
+// import { useEffect, useRef } from "react";
 import lobby from "../../assets/minigames/lobby-min.png";
 
 interface SectionProps {

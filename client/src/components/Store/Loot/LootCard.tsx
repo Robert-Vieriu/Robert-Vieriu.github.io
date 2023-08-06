@@ -7,7 +7,7 @@ interface Chests {
   image: string;
 }
 
-const LootCard = ({ title, price, link, image }: Chests) => {
+const LootCard = ({ title, price, image }: Chests) => {
   return (
     <div
       className={styles.container}

@@ -1,7 +1,7 @@
 import styles from "./RanksCard.module.css";
-import knight from "./../../../assets/shop/ranks/knight.svg";
-import wizard from "./../../../assets/shop/ranks/wizard.svg";
-import master from "./../../../assets/shop/ranks/master.svg";
+// import knight from "./../../../assets/shop/ranks/knight.svg";
+// import wizard from "./../../../assets/shop/ranks/wizard.svg";
+// import master from "./../../../assets/shop/ranks/master.svg";
 
 interface Rank {
   id: number | string;
@@ -17,7 +17,7 @@ interface Perk {
   value: any;
   active: boolean;
 }
-const RanksCard = ({ id, price, title, perks, link, pattern }: Rank) => {
+const RanksCard = ({ id, price, title, perks, pattern }: Rank) => {
   return (
     <div className={styles.container}>
       <div
