@@ -61,9 +61,9 @@ const StorePage = () => {
           )} */}
           {/* {localStorage.getItem("username") ? ( */}
           <p className={styles.donationText}>
-            To donate please contact {process.env.VITE_DISCORD_DONATION} on our{" "}
+            To donate please contact {"@pixelpeakofficial"} on our{" "}
             <span className={styles.donationDiscordText}>
-              <a href={process.env.VITE_DISCORD_LINK}>discord server</a>
+              <a href={"https://discord.gg/4NTsbWMw3B"}>discord server</a>
             </span>
             .
           </p>

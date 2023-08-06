@@ -120,7 +120,7 @@ const Navigation = (props: any) => {
           </li>
           <li className={styles.listItem}>
             <a //@ts-ignore
-              href={process.env.VITE_DISCORD_LINK}
+              href={"https://discord.gg/4NTsbWMw3B"}
               className={styles.listLink}
             >
               Support
@@ -167,7 +167,7 @@ const Navigation = (props: any) => {
               Store
             </a>
             <a //@ts-ignore
-              href={process.env.VITE_DISCORD_LINK}
+              href={"https://discord.gg/4NTsbWMw3B"}
               className={styles.listLink}
             >
               Support

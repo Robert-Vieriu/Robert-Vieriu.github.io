@@ -21,7 +21,10 @@ const Footer = () => {
           <div className={styles.row}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
-                <a href={process.env.VITE_DISCORD_LINK} className={styles.link}>
+                <a
+                  href={"https://discord.gg/4NTsbWMw3B"}
+                  className={styles.link}
+                >
                   <FontAwesomeIcon
                     className={styles.socialIcons}
                     icon={faDiscord}

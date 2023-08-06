@@ -15,7 +15,7 @@ function App() {
   const IP = "116.203.67.152";
   useEffect(() => {
     axios
-      .get(`https://mcapi.us/server/status?ip=${process.env.VITE_MINECRAFT_IP}`)
+      .get(`https://mcapi.us/server/status?ip=${"116.203.67.152"}`)
       .then((res) => {
         setPlayerOnline(res.data.players.now);
       });
